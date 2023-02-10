@@ -1,0 +1,61 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: $colorPrimario;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: MuseoSansRounded, 'Montserrat';
+    list-style: none;
+}
+
+main{
+    overflow: hidden;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out 400ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+body {
+    background-color: $fondo;
+}
+
+button {
+    cursor: pointer;
+}
+
+a:hover {
+    color: $colorSecundario;
+}

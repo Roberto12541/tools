@@ -1,0 +1,13 @@
+.forms {
+    @include flex("", flex-start, column, 5px);
+
+    input,
+    textarea {
+        outline: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid $colorSecundario;
+        width: 100%;
+        box-shadow: 10px     10px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+}

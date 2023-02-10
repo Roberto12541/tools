@@ -1,0 +1,55 @@
+.cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10% 5%;
+
+    &--xbox {
+        @extend .cover;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/fondos/cover-xbox.png");
+    }
+
+    &--playstation {
+        @extend .cover;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url("../img/fondos/cover-playstation.webp");
+    }
+
+    &--switch {
+        @extend .cover;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url("../img/fondos/cover-switch.jpg");
+    }
+    &--juegos {
+        @extend .cover;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/fondos/cover-juegos.webp");
+    }
+    &--accesorios {
+        @extend .cover;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fondos/cover-accesorios.webp");
+    }
+
+    .contenedor {
+        @include flex(flex-start, center, row, 0px);
+        padding: 0px 20px;
+
+        .texto {
+            width: 70%;
+        }
+
+        &--end {
+            @extend .contenedor;
+            justify-content: flex-end;
+
+            .texto {
+                text-align: right;
+            }
+        }
+        &--centro{
+            @extend .contenedor;
+            justify-content: center;
+
+            .texto {
+                text-align: center;
+            }
+        }
+    }
+}

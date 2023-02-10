@@ -1,0 +1,55 @@
+// Colores de pagina
+$colorPrimario: #0560fd;
+$colorSecundario: #07cbfd;
+$items: white;
+$fondo: #121028;
+$colorNav: #131231;
+$colorFooter: #131231;
+$colorBorde: #1f1f3b;
+$colorXbox: #189e02;
+$colorPlaystation: #0055d1;
+$colorSwitch: #f80001;
+$colorPc: #FAA307;
+
+$colores: (
+    pc: $colorPc,
+    switch: $colorSwitch,
+    playstation: $colorPlaystation,
+    xbox: $colorXbox,
+    primario: $colorPrimario,
+    secundario: $colorSecundario,
+);
+
+// Contenedores
+section {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+
+// Imagenes
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+//Alineacion de texto
+$text-align: (
+    center: center,
+    left: left,
+    right: right,
+    justify: justify
+);
+
+@each $alineacion,
+$valor in $text-align {
+    .t-#{$alineacion} {
+        text-align: $valor;
+    }
+}

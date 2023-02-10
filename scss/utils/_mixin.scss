@@ -1,0 +1,39 @@
+//Breakpoints
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+// Mixin y Queries
+@mixin query($breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+//Mixins Display
+@mixin flex($justify: center, $align: center, $direction: row, $gap: 0px) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin grid($col, $gap, $align, $justify) {
+    display: grid;
+    grid-template-columns: $col;
+    gap: $gap;
+    align-items: $align;
+    justify-items: $justify;
+}
+
+// Mixin Font
+@mixin font($color, $size: 16px, $weight: 100, $align: left) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    text-align: $align;
+}

@@ -1,0 +1,55 @@
+.contacto {
+    background-image: url(../img/fondos/contacto-background.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+
+    .contenedor {
+        @include flex(space-evenly, center, column, 20px);
+
+        .info__contacto {
+            background-color: #131231;
+            color: white;
+            padding: 40px;
+            border: 2px solid $colorBorde;
+            border-radius: 20px;
+            
+            .texto {
+                @include flex("", "", column, 10px);
+
+                .datos_contacto {
+                    @include flex("", "", column, "");
+                }
+            }
+
+            .redes {
+                @include flex(flex-start, center, row, 40px);
+                padding: 15px 0px;
+                font-size: 32px;
+            }
+        }
+
+        .ubicacion {
+            width: 250px;
+            height: 250px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+
+            @include query(md) {
+                width: 550px;
+                height: 350px;
+
+                @include query(lg) {
+                    width: 450px;
+                    height: 450px;
+                }
+            }
+        }
+
+        @include query(md) {
+            align-items: flex-start;
+            flex-direction: row;
+        }
+    }
+}
